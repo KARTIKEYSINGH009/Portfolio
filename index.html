@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kartikey Singh — AI/ML Developer</title>
+<meta name="description" content="Kartikey Singh is an AI/ML developer building voice agents, workflow automations, and RAG chatbots, with software projects in Java and Python.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FCFAF4;
+    --paper-2:#F5F1E8;
+    --cream:#FAF3E6;
+    --sage:#EFF4EA;
+    --clay:#B4542A;
+    --clay-soft:#F7E9DF;
+    --gold:#A97B1F;
+    --gold-soft:#F6EEDC;
+    --slate:#3B5B8C;
+    --slate-soft:#E8EEF6;
+    --ink:#1B1814;
+    --ink-2:#4A443B;
+    --muted:#7A7266;
+    --line:#E4DFD4;
+    --accent:#0E5A4A;
+    --accent-soft:#E7F0EC;
+    --serif:"Fraunces",Georgia,"Times New Roman",serif;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  ::selection{background:var(--accent);color:#fff}
+
+  /* ---------- nav ---------- */
+  nav{position:sticky;top:0;z-index:50;background:rgba(250,249,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .wordmark{font-family:var(--serif);font-size:20px;font-weight:600;letter-spacing:-.01em}
+  .wordmark em{font-style:normal;color:var(--accent)}
+  .nav-links{display:flex;gap:30px;font-size:14px;font-weight:500;color:var(--ink-2)}
+  .nav-links a{position:relative;padding:4px 0}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--accent);transition:width .2s ease}
+  .nav-links a:hover::after{width:100%}
+  .status{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:500;color:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:8px 16px;background:#fff}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+
+  /* ---------- hero ---------- */
+  .hero{padding:104px 0 72px;border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(720px 380px at 12% 8%,rgba(180,84,42,.10),transparent 60%),
+      radial-gradient(760px 420px at 88% 92%,rgba(14,90,74,.10),transparent 60%),
+      radial-gradient(560px 320px at 78% 10%,rgba(169,123,31,.09),transparent 60%),
+      var(--paper);}
+  .kicker{font-size:12.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:26px}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(42px,6.4vw,76px);line-height:1.06;letter-spacing:-.015em;max-width:14em;margin-bottom:28px}
+  .hero h1 .it{font-style:italic;color:var(--accent)}
+  .lede{font-size:19px;color:var(--ink-2);max-width:38em;margin-bottom:40px}
+  .lede strong{color:var(--ink);font-weight:600}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:600;padding:13px 26px;border-radius:6px;transition:background .18s ease,transform .18s ease}
+  .btn-dark{background:var(--ink);color:var(--paper)}
+  .btn-dark:hover{background:#000;transform:translateY(-1px)}
+  .btn-line{border:1px solid var(--line);background:#fff;color:var(--ink)}
+  .btn-line:hover{border-color:var(--ink)}
+  .hero-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+  .hero-meta div{padding:22px 24px 4px 0;border-right:1px solid var(--line);margin-right:24px}
+  .hero-meta div:last-child{border-right:none}
+  .hero-meta .k{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .hero-meta .v{font-size:15px;font-weight:500}
+
+  /* ---------- sections ---------- */
+  section.block{padding:88px 0;border-bottom:1px solid var(--line)}
+  #work{background:var(--sage)}
+  #services{background:var(--paper)}
+  #about{background:var(--cream)}
+  .sec-head{display:flex;align-items:baseline;gap:20px;margin-bottom:52px}
+  .sec-num{font-family:var(--serif);font-size:15px;color:var(--muted);font-style:italic}
+  .sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4vw,44px);letter-spacing:-.01em}
+  .sec-head .rule{flex:1;height:1px;background:var(--line);align-self:center}
+
+  /* ---------- case study ---------- */
+  .case{display:grid;grid-template-columns:300px 1fr;gap:64px;margin-bottom:80px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:52px}
+  .case-meta{position:sticky;top:100px;align-self:start;border-top:2px solid var(--ink);padding-top:20px}
+  .case-meta dl{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:14px}
+  .case-meta dt{color:var(--muted);font-weight:500}
+  .case-meta dd{font-weight:600}
+  .case-meta .code-link{display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:2px}
+  .case-body .tag-row{display:flex;gap:10px;align-items:center;margin-bottom:18px}
+  .pill{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:6px 13px;border-radius:999px}
+  .case-body h3{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3.6vw,42px);letter-spacing:-.01em;line-height:1.15;margin-bottom:20px}
+  .case-body p{color:var(--ink-2);margin-bottom:18px;max-width:44em}
+  .case-body p strong{color:var(--ink)}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:8px 40px;margin:28px 0;max-width:46em}
+  .two-col div{border-top:1px solid var(--line);padding:16px 0}
+  .two-col .t{font-weight:600;font-size:15px;margin-bottom:4px}
+  .two-col .d{font-size:14.5px;color:var(--muted)}
+
+  /* ---------- project index ---------- */
+  .index-head,.index-row{display:grid;grid-template-columns:1.4fr 2fr 1.2fr .6fr;gap:24px;align-items:baseline;padding:22px 0}
+  .index-head{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:14px}
+  .index-row{border-bottom:1px solid var(--line);transition:background .15s ease}
+  .index-row:hover{background:#fff}
+  .index-row .name{font-family:var(--serif);font-size:20px;font-weight:600}
+  .index-row .desc{font-size:14.5px;color:var(--ink-2)}
+  .index-row .stack{font-size:13.5px;color:var(--muted)}
+  .index-row .go{text-align:right;font-weight:600;color:var(--accent);font-size:15px;white-space:nowrap}
+  .index-row .go:hover{text-decoration:underline}
+
+  /* ---------- services ---------- */
+  .svc{border-top:1px solid var(--line);padding:30px 0;display:grid;grid-template-columns:64px 1fr auto;gap:28px;align-items:start}
+  .svc:last-of-type{border-bottom:1px solid var(--line)}
+  .svc .n{font-family:var(--serif);font-style:italic;font-size:17px}
+  .svc:nth-of-type(2) .n{color:var(--accent)}
+  .svc:nth-of-type(3) .n{color:var(--clay)}
+  .svc:nth-of-type(4) .n{color:var(--gold)}
+  .svc:nth-of-type(5) .n{color:var(--slate)}
+  .svc h3{font-size:20px;font-weight:600;margin-bottom:6px;letter-spacing:-.01em}
+  .svc p{font-size:15px;color:var(--ink-2);max-width:40em}
+  .svc .buy{text-align:right}
+  .svc .price{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:8px;white-space:nowrap}
+  .svc .price span{color:var(--muted);font-weight:500}
+  .svc .order{font-size:14px;font-weight:600;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:1px;white-space:nowrap}
+  .svc .order:hover{color:var(--ink);border-color:var(--ink)}
+
+  /* ---------- about ---------- */
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:72px}
+  .about-grid p{color:var(--ink-2);margin-bottom:18px;max-width:36em}
+  .about-grid p strong{color:var(--ink)}
+  .cap-list{list-style:none;border-top:1px solid var(--line)}
+  .about-grid>div:last-child{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 30px;align-self:start}
+  .cap-list li{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .cap-list li span:first-child{font-weight:600}
+  .cap-list li span:last-child{color:var(--muted);text-align:right}
+  .exp{margin-top:36px;border-top:2px solid var(--ink);padding-top:20px}
+  .exp .row{display:flex;justify-content:space-between;gap:16px;padding:12px 0;font-size:15px}
+  .exp .row .role{font-weight:600}
+  .exp .row .when{color:var(--muted);white-space:nowrap}
+
+  /* ---------- contact ---------- */
+  .contact{padding:88px 0;background:var(--paper)}
+  .contact .wrap{background:linear-gradient(135deg,#FBF4E4,#F4E3C2);border:1px solid #EAD3A8;border-radius:18px;padding:72px 64px;position:relative;overflow:hidden}
+  .contact .wrap::before{content:"";position:absolute;inset:0;background:radial-gradient(620px 320px at 85% 18%,rgba(180,84,42,.08),transparent 60%);pointer-events:none}
+  .contact .wrap>*{position:relative;z-index:1}
+  .contact .kicker{color:var(--clay)}
+  .contact h2 .it{color:var(--clay)}
+  .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(38px,5.6vw,64px);letter-spacing:-.015em;line-height:1.1;margin-bottom:22px}
+  .contact h2 .it{font-style:italic;color:var(--accent)}
+  .contact p{color:var(--ink-2);font-size:18px;max-width:34em;margin-bottom:36px}
+
+  footer{border-top:1px solid var(--line);padding:30px 0}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+  footer .links{display:flex;gap:24px}
+  footer a{font-weight:500;color:var(--ink-2)}
+  footer a:hover{color:var(--ink)}
+
+  @media(max-width:860px){
+    .case{grid-template-columns:1fr;gap:32px}
+    .case-meta{position:static}
+    .hero-meta{grid-template-columns:1fr 1fr;gap:0}
+    .hero-meta div{padding:16px 16px 4px 0}
+    .about-grid{grid-template-columns:1fr;gap:48px}
+    .index-head{display:none}
+    .index-row{grid-template-columns:1fr;gap:6px}
+    .index-row .go{text-align:left}
+    .svc{grid-template-columns:1fr;gap:10px}
+    .svc .buy{text-align:left}
+    .nav-links{display:none}
+    .two-col{grid-template-columns:1fr}
+    .case{padding:32px 24px}
+    .contact .wrap{padding:52px 28px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="wordmark" href="#top">Kartikey Singh<em>.</em></a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="status" href="https://www.fiverr.com/singhkartikey" target="_blank" rel="noopener"><span class="dot"></span>Available for work</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="kicker">AI / ML Developer — India</div>
+    <h1>I build AI systems that <span class="it">do real work.</span></h1>
+    <p class="lede">I'm Kartikey Singh, a developer specialising in applied AI — <strong>voice agents</strong> that answer phones, <strong>workflow automations</strong> that remove busywork, and <strong>RAG chatbots</strong> that answer from your documents. Grounded in software engineering: Java, Python, and machine learning.</p>
+    <div class="cta-row">
+      <a class="btn btn-dark" href="#work">View selected work</a>
+      <a class="btn btn-line" href="https://github.com/KARTIKEYSINGH009" target="_blank" rel="noopener">GitHub profile</a>
+    </div>
+    <div class="hero-meta">
+      <div><div class="k">Focus</div><div class="v">Voice AI · Automation · RAG</div></div>
+      <div><div class="k">Core stack</div><div class="v">Python · Java · LangChain · n8n</div></div>
+      <div><div class="k">Open source</div><div class="v">4 public repositories</div></div>
+      <div><div class="k">Freelance</div><div class="v">4 services on Fiverr</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="block" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2>Selected work</h2>
+      <span class="rule"></span>
+    </div>
+
+    <article class="case">
+      <aside class="case-meta">
+        <dl>
+          <dt>Role</dt><dd>Design &amp; development</dd>
+          <dt>Stack</dt><dd>Java 17, concurrency</dd>
+          <dt>Type</dt><dd>CLI application</dd>
+          <dt>Year</dt><dd>2026</dd>
+          <dt>Status</dt><dd>Open source</dd>
+        </dl>
+        <a class="code-link" href="https://github.com/KARTIKEYSINGH009/ARGUS-Concurrent-Event-Investigation-Engine" target="_blank" rel="noopener">View source on GitHub</a>
+      </aside>
+      <div class="case-body">
+        <div class="tag-row"><span class="pill">Featured project</span></div>
+        <h3>ARGUS — Concurrent Event Investigation Engine</h3>
+        <p>Small teams receive authentication and system events as raw logs, and reading every line means missing the burst of failed logins or the one critical event that matters. <strong>ARGUS keeps a local event store, evaluates detection rules concurrently, and hands an investigator a focused timeline</strong> instead of a wall of text.</p>
+        <p>I built it as a dependency-free Java CLI: validated event ingestion into CSV storage, a fixed thread pool evaluating detection rules in parallel, and a per-user investigation view with a risk summary. The detection rules are deliberately explainable — high-severity events and repeated failed logins — so every flag can be traced to a reason, not a black box.</p>
+        <div class="two-col">
+          <div><div class="t">Concurrent rule evaluation</div><div class="d">Runnable tasks over a fixed thread pool; each rule runs independently.</div></div>
+          <div><div class="t">Explainable anomalies</div><div class="d">Two transparent rules with reasons attached to every detection.</div></div>
+          <div><div class="t">Investigation timeline</div><div class="d">Per-user event history with a computed risk summary.</div></div>
+          <div><div class="t">Zero dependencies</div><div class="d">Compiles with javac alone; tests run without a framework.</div></div>
+        </div>
+      </div>
+    </article>
+
+    <div class="sec-head" style="margin-bottom:8px">
+      <span class="sec-num">02</span>
+      <h2 style="font-size:clamp(22px,3vw,30px)">More projects</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="index-head"><span>Project</span><span>Description</span><span>Stack</span><span></span></div>
+
+    <a class="index-row" href="https://github.com/KARTIKEYSINGH009/Student-Performance-Predictor" target="_blank" rel="noopener">
+      <span class="name">Student Performance Predictor</span>
+      <span class="desc">Predicts student pass/fail from marks, attendance, and study hours using logistic regression on a synthetic dataset, with an interactive terminal mode.</span>
+      <span class="stack">Python · scikit-learn · pandas</span>
+      <span class="go">GitHub →</span>
+    </a>
+    <a class="index-row" href="https://github.com/KARTIKEYSINGH009/Mall-Items-Management-System" target="_blank" rel="noopener">
+      <span class="name">Mall Items Management System</span>
+      <span class="desc">Console program for browsing items, managing a cart, and calculating totals — built on OOP principles: classes, inheritance, modularisation.</span>
+      <span class="stack">Python · OOP</span>
+      <span class="go">GitHub →</span>
+    </a>
+    <a class="index-row" href="https://github.com/KARTIKEYSINGH009/Digital-Literacy-Portfolio" target="_blank" rel="noopener">
+      <span class="name">Digital Literacy Portfolio</span>
+      <span class="desc">Structured portfolio covering infographic design, professional profiles, coding practice, communication skills, and cybercrime awareness.</span>
+      <span class="stack">Documentation · Design</span>
+      <span class="go">GitHub →</span>
+    </a>
+  </div>
+</section>
+
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2>Freelance services</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="svc">
+      <span class="n">/ 01</span>
+      <div><h3>AI voice agent</h3><p>Receptionist and calling agents built with Retell or Vapi — answering calls, booking appointments, and qualifying leads around the clock.</p></div>
+      <div class="buy"><div class="price"><span>from</span> $20</div><a class="order" href="https://www.fiverr.com/singhkartikey/build-an-ai-voice-agent-and-ai-receptionist-with-vapi-or-retell" target="_blank" rel="noopener">Order on Fiverr</a></div>
+    </div>
+    <div class="svc">
+      <span class="n">/ 02</span>
+      <div><h3>Business process automation</h3><p>n8n workflows that connect your tools — CRM sync, lead pipelines, notifications, and AI-augmented steps where they pay off.</p></div>
+      <div class="buy"><div class="price"><span>from</span> $40</div><a class="order" href="https://www.fiverr.com/singhkartikey/build-a-rag-chatbot-with-langchain-for-your-docs" target="_blank" rel="noopener">Order on Fiverr</a></div>
+    </div>
+    <div class="svc">
+      <span class="n">/ 03</span>
+      <div><h3>AI lead generation system</h3><p>End-to-end prospecting and outreach — finding leads, enriching data, and automating personalised follow-ups.</p></div>
+      <div class="buy"><div class="price"><span>from</span> $30</div><a class="order" href="https://www.fiverr.com/singhkartikey/build-an-ai-lead-generation-and-outreach-system" target="_blank" rel="noopener">Order on Fiverr</a></div>
+    </div>
+    <div class="svc">
+      <span class="n">/ 04</span>
+      <div><h3>AI chatbot for website &amp; documents</h3><p>RAG chatbots with LangChain that answer questions grounded in your website content and documents — not hallucinations.</p></div>
+      <div class="buy"><div class="price"><span>from</span> $40</div><a class="order" href="https://www.fiverr.com/singhkartikey/build-an-ai-chatbot-for-your-website-and-documents" target="_blank" rel="noopener">Order on Fiverr</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <h2>About</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p>I'm an <strong>AI/ML developer</strong> working at the intersection of software engineering and applied AI. My freelance practice focuses on three things businesses actually pay for: <strong>voice agents</strong> (Retell, Vapi), <strong>automation</strong> (n8n), and <strong>document-aware chatbots</strong> (LangChain, RAG).</p>
+        <p>Before the AI work, I built the fundamentals — <strong>concurrent systems in Java</strong>, <strong>machine learning in Python</strong>, data structures and algorithms. I care about systems that are explainable and maintainable, not demos that fall over in production.</p>
+        <p>Currently pursuing a <strong>B.Tech in Computer Science &amp; Engineering at VIT Bhopal</strong>, and building a freelance practice alongside it.</p>
+        <div class="exp">
+          <div class="row"><span class="role">AI/ML Developer — Self-employed</span><span class="when">Jan 2024 – Present</span></div>
+        </div>
+      </div>
+      <div>
+        <ul class="cap-list">
+          <li><span>Languages</span><span>Python, Java, C++</span></li>
+          <li><span>AI / ML</span><span>scikit-learn, pandas, LangChain, RAG, OpenAI</span></li>
+          <li><span>Voice AI</span><span>Retell AI, Vapi</span></li>
+          <li><span>Automation</span><span>n8n, REST APIs, webhooks</span></li>
+          <li><span>Fundamentals</span><span>DSA, OOP, concurrency, Git</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="kicker">Contact</div>
+    <h2>Have a project in mind? <span class="it">Let's talk.</span></h2>
+    <p>I'm currently taking on freelance AI projects — voice agents, automations, and chatbots. The fastest way to reach me is through Fiverr.</p>
+    <div class="cta-row" style="margin-bottom:0">
+      <a class="btn btn-dark" href="https://www.fiverr.com/singhkartikey" target="_blank" rel="noopener">Hire me on Fiverr</a>
+      <a class="btn btn-line" href="https://github.com/KARTIKEYSINGH009" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Kartikey Singh</span>
+    <div class="links">
+      <a href="https://github.com/KARTIKEYSINGH009" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.fiverr.com/singhkartikey" target="_blank" rel="noopener">Fiverr</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
