@@ -3,7 +3,7 @@
 
 Personal portfolio website of Kartikey Singh, AI/ML developer building voice agents, workflow automations, and RAG chatbots.
 
-**Live:** https://portfolio-lyajxote4-kartikeysingh009.vercel.app
+**Live:** [https://portfolio-lyajxote4-kartikeysingh009.vercel.app](https://portfolio-kartikeysingh009.vercel.app/)
 
 ## Tech
 - HTML + CSS (single-page static site)
