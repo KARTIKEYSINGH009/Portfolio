@@ -202,8 +202,8 @@
     </div>
     <div class="hero-meta">
       <div><div class="k">Focus</div><div class="v">Voice AI · Automation · RAG</div></div>
-      <div><div class="k">Core stack</div><div class="v">Python · Java · LangChain · n8n</div></div>
-      <div><div class="k">Open source</div><div class="v">4 public repositories</div></div>
+      <div><div class="k">Core stack</div><div class="v">Python · Java · FastAPI · LangChain</div></div>
+      <div><div class="k">Projects</div><div class="v">6 featured on GitHub</div></div>
       <div><div class="k">Freelance</div><div class="v">4 services on Fiverr</div></div>
     </div>
   </div>
@@ -221,23 +221,24 @@
       <aside class="case-meta">
         <dl>
           <dt>Role</dt><dd>Design &amp; development</dd>
-          <dt>Stack</dt><dd>Java 17, concurrency</dd>
-          <dt>Type</dt><dd>CLI application</dd>
+          <dt>Stack</dt><dd>Python, FastAPI, scikit-learn</dd>
+          <dt>Type</dt><dd>AI security gateway</dd>
           <dt>Year</dt><dd>2026</dd>
-          <dt>Status</dt><dd>Open source</dd>
+          <dt>Status</dt><dd>Live demo</dd>
         </dl>
-        <a class="code-link" href="https://github.com/KARTIKEYSINGH009/ARGUS-Concurrent-Event-Investigation-Engine" target="_blank" rel="noopener">View source on GitHub</a>
+        <a class="code-link" href="https://verity-nine-flame.vercel.app" target="_blank" rel="noopener">Try the live demo</a><br>
+        <a class="code-link" href="https://github.com/KARTIKEYSINGH009/verity" target="_blank" rel="noopener">View source on GitHub</a>
       </aside>
       <div class="case-body">
         <div class="tag-row"><span class="pill">Featured project</span></div>
-        <h3>ARGUS — Concurrent Event Investigation Engine</h3>
-        <p>Small teams receive authentication and system events as raw logs, and reading every line means missing the burst of failed logins or the one critical event that matters. <strong>ARGUS keeps a local event store, evaluates detection rules concurrently, and hands an investigator a focused timeline</strong> instead of a wall of text.</p>
-        <p>I built it as a dependency-free Java CLI: validated event ingestion into CSV storage, a fixed thread pool evaluating detection rules in parallel, and a per-user investigation view with a risk summary. The detection rules are deliberately explainable — high-severity events and repeated failed logins — so every flag can be traced to a reason, not a black box.</p>
+        <h3>Verity — AI Firewall for LLM Apps</h3>
+        <p>Any app built on a language model inherits two risks: users who try to jailbreak it, and a model that confidently makes things up. <strong>Verity sits between your application and the model as a gateway</strong> — every prompt is screened on the way in, every answer is graded on the way out, and everything is logged for review.</p>
+        <p>It's an OpenAI-compatible API: point any OpenAI client at Verity and the guard, judge, and tracing come along for free. The layers are designed to degrade gracefully — if the classifier or the judge is unavailable, the pipeline falls back instead of breaking. The public demo runs live in mock mode.</p>
         <div class="two-col">
-          <div><div class="t">Concurrent rule evaluation</div><div class="d">Runnable tasks over a fixed thread pool; each rule runs independently.</div></div>
-          <div><div class="t">Explainable anomalies</div><div class="d">Two transparent rules with reasons attached to every detection.</div></div>
-          <div><div class="t">Investigation timeline</div><div class="d">Per-user event history with a computed risk summary.</div></div>
-          <div><div class="t">Zero dependencies</div><div class="d">Compiles with javac alone; tests run without a framework.</div></div>
+          <div><div class="t">Input guard</div><div class="d">Eleven heuristic rules layered with a trained Naive Bayes classifier block injection and jailbreak attempts, naming the matched signals.</div></div>
+          <div><div class="t">Faithfulness judge</div><div class="d">An LLM-as-judge grades each answer against its source material: a 0–1 score with grounded / hallucination-risk verdicts.</div></div>
+          <div><div class="t">Business-policy guard</div><div class="d">Your own rules — for example a no-refunds policy — enforced on both requests and the model's answers.</div></div>
+          <div><div class="t">Observability</div><div class="d">Every request traced: input, output, flags, faithfulness score, and latency, in a review dashboard.</div></div>
         </div>
       </div>
     </article>
@@ -249,6 +250,18 @@
     </div>
     <div class="index-head"><span>Project</span><span>Description</span><span>Stack</span><span></span></div>
 
+    <a class="index-row" href="https://github.com/KARTIKEYSINGH009/crewly" target="_blank" rel="noopener">
+      <span class="name">Crewly</span>
+      <span class="desc">A virtual office for AI agents — leaders create workspaces, members connect their agents, work moves as structured task handoffs, and humans verify daily reports. MVP in development.</span>
+      <span class="stack">Next.js · TypeScript · Supabase</span>
+      <span class="go">GitHub →</span>
+    </a>
+    <a class="index-row" href="https://github.com/KARTIKEYSINGH009/ARGUS-Concurrent-Event-Investigation-Engine" target="_blank" rel="noopener">
+      <span class="name">ARGUS</span>
+      <span class="desc">Concurrent event investigation engine — a dependency-free Java CLI that evaluates detection rules in parallel over a thread pool, with explainable anomaly detection and per-user investigation timelines.</span>
+      <span class="stack">Java 17 · Concurrency · CLI</span>
+      <span class="go">GitHub →</span>
+    </a>
     <a class="index-row" href="https://github.com/KARTIKEYSINGH009/Student-Performance-Predictor" target="_blank" rel="noopener">
       <span class="name">Student Performance Predictor</span>
       <span class="desc">Predicts student pass/fail from marks, attendance, and study hours using logistic regression on a synthetic dataset, with an interactive terminal mode.</span>
@@ -320,7 +333,7 @@
       <div>
         <ul class="cap-list">
           <li><span>Languages</span><span>Python, Java, C++</span></li>
-          <li><span>AI / ML</span><span>scikit-learn, pandas, LangChain, RAG, OpenAI</span></li>
+          <li><span>AI / ML</span><span>scikit-learn, pandas, LangChain, RAG, LLM guardrails &amp; eval</span></li>
           <li><span>Voice AI</span><span>Retell AI, Vapi</span></li>
           <li><span>Automation</span><span>n8n, REST APIs, webhooks</span></li>
           <li><span>Fundamentals</span><span>DSA, OOP, concurrency, Git</span></li>
